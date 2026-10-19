@@ -24,12 +24,12 @@ jobs:
           fetch-depth: 0 # TestDetta compares with the merge base
 
       - if: github.event_name == 'push'
-        uses: TestDetta/action@<sha> # v0.2.2
+        uses: TestDetta/action@<sha> # v0.3.0
         with:
           mode: record
 
       - if: github.event_name == 'pull_request'
-        uses: TestDetta/action@<sha> # v0.2.2
+        uses: TestDetta/action@<sha> # v0.3.0
         with:
           mode: test
           license: ${{ secrets.TESTDETTA_LICENSE }}
